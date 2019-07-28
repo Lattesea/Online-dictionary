@@ -1,9 +1,9 @@
 # Online-dictionary
 ============================================
-##项目简介
+## 项目简介
 这是适合新手练习的小项目，一个不掺杂其他内容的简易英英词典，主要实现的功能：客户端输入需要查询的单词，然后自动发送给服务端，服务端返回单词释义给客户端。
 
-##配置信息
+## 配置信息
 * python3 推荐使用pycharm或者vscode作为集成开发工具.
 * Mysql数据库
 * Ubuntu 18.04.2 LTS
@@ -20,13 +20,13 @@
 
 > pymysql : python中的数据库操作模块，用于程序与数据库之间的交互
 
-##技术方案
+## 技术方案
 * TCP套接字
 * 多进程
 * 历史记录查询，返回前十条记录
 * 注册成功之后直接登录
 
-##数据库创建
+## 数据库创建
 > 创建数据库 dict  （utf8）
 
 > 单词 words  ->id word mean
@@ -38,7 +38,7 @@ create table words (id int primary key auto_increment,word char(32),mean text);
 > 历史记录 hist-> id name  word  time
    create table hist (id int primary key auto_increment,name varchar(32) not null, word varchar(28) not null,time datetime default now() );
 
-##功能分析 和 通信搭建
+## 功能分析 和 通信搭建
 
 >并发通信
 登录
@@ -46,7 +46,7 @@ create table words (id int primary key auto_increment,word char(32),mean text);
 查单词
 历史记录
 
-##客户端服务端协议
+## 客户端服务端协议
 
 >注册   R
 登录   L
@@ -80,7 +80,7 @@ create table words (id int primary key auto_increment,word char(32),mean text);
 >* 判断是否允许登录
 >* 发送结果
 
-####查单词 
+#### 查单词 
 >客户端： 
 >* 输入单词
 >* 发送请求 Q+name+word
