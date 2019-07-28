@@ -92,7 +92,7 @@ create table words (id int primary key auto_increment,word char(32),mean text);
 >* 发送结果
 >* 插入历史记录
 
-####查历史记录
+#### 查历史记录
 >客户端：
 >* 发送请求 H+name
 >* 等待接受结果
